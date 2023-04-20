@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div class="app-wrapper">
+            <p class="title">QR Code Generator</p>
+
+            <div class="input-wrapper">
+                <input type="text" placeholder="Enter text or link...">
+                <button onclick="generateQR()">Generate QR</button>
+            </div>
+            <hr>
+            <div class="qr-img none">
+                <p>Scan Here <i class="ri-corner-right-down-fill"></i></p>
+                <img src="" alt="">
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

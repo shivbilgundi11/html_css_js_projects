@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    min-width: unset;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem;
+}
+
+h2 img {
+    width: 35px;
+    height: 35px;
+    margin-left: 0.6rem;
+}
+
+.contact__content{
+  width: 100%;
+  position: relative;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact__input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem 1rem 0.5rem;
+  background: none;
+  font-size: 16px;
+
+  color: #000;
+
+  
+  border: none;
+  border-bottom: 1px solid #9e9d9d;
+  outline: none;
+  z-index: 1;
+}
+
+.contact__label{
+  position: absolute;
+  top: 1rem;
+  width: 100%;
+  font-size: 12px;
+  color: #2f2f2f;
+  transition: .3s;
+}
+
+/*Input focus move up label*/
+.contact__input:focus + .contact__label{
+  top: -.75rem;
+  left: 0;
+  font-size: 12px;
+  z-index: 10;
+}
+
+/*Input focus sticky top label*/
+.contact__input:not(:placeholder-shown).contact__input:not(:focus) + .contact__label{
+  top: -.75rem;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.contact__input:focus {
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+
+.contact__content .icon {
+    width: 35px;
+    height: 35px;
+    font-size: 26px;
+    position: absolute;
+    right: 0rem;
+    top: 16%;
+    transition: background-color 0.3s ease;
+    z-index: 30;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.contact__content .icon:hover {
+    background-color: #cbc8c8;
+}
+
+.list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    margin-top: 1rem;
+}
+
+.list-container li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 2rem;
+    line-height: 20px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    z-index: 40;
+}
+
+.list-container li::before {
+    content: "";
+    background: url(./images/unchecked.png);
+    width: 20px;
+    height: 20px;
+    border: 1px solid #b9b7b7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    line-height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.list-container li.checked::before {
+    background: url(./images/checked.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li.checked {
+    text-decoration: line-through;
+}
+
+.list-container li span {
+    width: 20px;
+    height: 20px;
+    background: #f46539;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 41;
+}
+
+/* @media screen and (max-width: 768px) {
+    .app {
+        width: 100%;
+        min-width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    
+} */
